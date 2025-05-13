@@ -55,7 +55,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-          name: map
+          name: github-pages
 
   deploy:
     environment:
