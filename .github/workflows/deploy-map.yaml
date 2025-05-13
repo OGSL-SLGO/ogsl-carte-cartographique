@@ -19,7 +19,13 @@ jobs:
       - name: Clone config repository
         uses: actions/checkout@v4
         with:
-          clean: false
+          path: "config"
+
+      - name: Copy config files
+        run: |
+          cp -r config/. .
+          cp -r config/.* .
+
       - name: List resulting files
         run: ls -la
 
