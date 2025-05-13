@@ -1,0 +1,16 @@
+name: Deploy Map
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy catalogue to Github Pages
+        uses: OGSL-SLGO/ogsl-nextjs-map-template@feature/add-github-composite-action
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
