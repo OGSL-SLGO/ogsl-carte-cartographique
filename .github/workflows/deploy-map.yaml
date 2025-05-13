@@ -5,14 +5,14 @@ on:
     branches:
       - main
 
+permissions: # Add this block to set permissions
+  id-token: write
+  contents: read
+  pages: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: # Add this block to set permissions
-      id-token: write
-      contents: read
-      pages: write
-
     steps:
       - name: Clone catalogue map repository
         uses: actions/checkout@v4
