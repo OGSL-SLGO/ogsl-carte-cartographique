@@ -11,6 +11,7 @@ jobs:
     permissions: # Add this block to set permissions
       id-token: write
       contents: read
+      pages: write
 
     steps:
       - name: Clone catalogue map repository
